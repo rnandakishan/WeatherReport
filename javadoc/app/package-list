@@ -1,0 +1,9 @@
+$dokka.format:html
+$dokka.linkExtension:html
+
+com.assignment.weatherreport
+com.assignment.weatherreport.db
+com.assignment.weatherreport.model
+com.assignment.weatherreport.repo
+com.assignment.weatherreport.service
+com.assignment.weatherreport.ui

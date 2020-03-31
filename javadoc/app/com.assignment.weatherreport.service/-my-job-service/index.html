@@ -1,0 +1,77 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>MyJobService - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">com.assignment.weatherreport.service</a>&nbsp;/&nbsp;<a href="./index.html">MyJobService</a><br/>
+<br/>
+<h1>MyJobService</h1>
+<code><span class="keyword">class </span><span class="identifier">MyJobService</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/app/job/JobService.html"><span class="identifier">JobService</span></a></code>
+<p>Service which is triggered every 2 hours and gets weather data from server</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">MyJobService</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Service which is triggered every 2 hours and gets weather data from server</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="get-current-weather-live-data.html">getCurrentWeatherLiveData</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">getCurrentWeatherLiveData</span><span class="symbol">: </span><span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="../../com.assignment.weatherreport.model/-api-response/index.html"><span class="identifier">ApiResponse</span></a><span class="symbol">&gt;</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="repository.html">repository</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">repository</span><span class="symbol">: </span><a href="../../com.assignment.weatherreport.repo/-service-repository/index.html"><span class="identifier">ServiceRepository</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="insert-current-weather-data.html">insertCurrentWeatherData</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">insertCurrentWeatherData</span><span class="symbol">(</span><span class="identifier" id="com.assignment.weatherreport.service.MyJobService$insertCurrentWeatherData(com.assignment.weatherreport.db.ServiceResponseEntity)/serviceResponseEntity">serviceResponseEntity</span><span class="symbol">:</span>&nbsp;<a href="../../com.assignment.weatherreport.db/-service-response-entity/index.html"><span class="identifier">ServiceResponseEntity</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Job</span></code>
+<p>Calls method in repository class to save the data to local database</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="on-start-job.html">onStartJob</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">onStartJob</span><span class="symbol">(</span><span class="identifier" id="com.assignment.weatherreport.service.MyJobService$onStartJob(android.app.job.JobParameters)/params">params</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/app/job/JobParameters.html"><span class="identifier">JobParameters</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>This method gets triggered when job is started and observes the weather data after starting the service,saves it to database when data is changed.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="on-stop-job.html">onStopJob</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">onStopJob</span><span class="symbol">(</span><span class="identifier" id="com.assignment.weatherreport.service.MyJobService$onStopJob(android.app.job.JobParameters)/params">params</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/app/job/JobParameters.html"><span class="identifier">JobParameters</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,104 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>MyApplication - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">com.assignment.weatherreport</a>&nbsp;/&nbsp;<a href="./index.html">MyApplication</a><br/>
+<br/>
+<h1>MyApplication</h1>
+<code><span class="keyword">class </span><span class="identifier">MyApplication</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/app/Application.html"><span class="identifier">Application</span></a></code>
+<p>Application class which is contains JobScheduler implementation to schedule the download process for every 2 hours</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">MyApplication</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Application class which is contains JobScheduler implementation to schedule the download process for every 2 hours</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-f-a-i-l-e-d_-k-e-y.html">FAILED_KEY</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">FAILED_KEY</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-j-o-b_-i-d.html">JOB_ID</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">JOB_ID</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-p-e-r-i-o-d-i-c_-t-i-m-e.html">PERIODIC_TIME</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">PERIODIC_TIME</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code>
+<p>Repeat for every 2 hours</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-s-u-c-c-e-s-s_-k-e-y.html">SUCCESS_KEY</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">SUCCESS_KEY</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-y-o-u-r_-a-p-i_-k-e-y.html">YOUR_API_KEY</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">YOUR_API_KEY</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>KEY used for service call to get weather data</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="address-string.html">addressString</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">addressString</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Global variable which gets updated when current location is received.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="database.html">database</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">database</span><span class="symbol">: </span><a href="../../com.assignment.weatherreport.db/-app-database/index.html"><span class="identifier">AppDatabase</span></a><span class="symbol">?</span></code>
+<p>Global instance of room database</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="schedule-job.html">scheduleJob</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">scheduleJob</span><span class="symbol">(</span><span class="identifier" id="com.assignment.weatherreport.MyApplication.Companion$scheduleJob(android.content.Context)/context">context</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>create the job to get triggered for every 2 hours, constraints are also added which when meat triggers this JOB.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>
